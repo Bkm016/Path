@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "path",
+  "version": "${version}",
+  "name": "Path",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "sh.taboo.path.client.PathClient"
+    ],
+    "main": [
+      "sh.taboo.path.Path"
+    ]
+  },
+  "mixins": [
+    "path.mixins.json",
+    {
+      "config": "path.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
